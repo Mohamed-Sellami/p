@@ -1,0 +1,33 @@
+.text-neon {
+    color: #e6ff00; /* Adjust this color if needed */
+  }
+  
+  .bg-neon {
+    background-color: #e6ff00; /* Adjust this color if needed */
+  }
+
+
+  /* Define the animation for Experience component */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially hide the element */
+.timeline-event {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* This class will trigger the animation when it is in the viewport */
+.timeline-event.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

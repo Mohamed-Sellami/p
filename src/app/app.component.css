@@ -1,0 +1,10 @@
+body {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+   
+  }

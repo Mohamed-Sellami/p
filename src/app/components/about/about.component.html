@@ -1,0 +1,60 @@
+<section class="min-h-screen bg-black text-white py-16 px-4 md:px-8">
+    <div class="container mx-auto max-w-5xl">
+      <div class="mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-2 text-neon">ABOUT</h2>
+        <div class="w-8 h-1 bg-neon"></div>
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="aspect-square w-full max-w-xs mx-auto md:mx-0 bg-gray-800 rounded-full overflow-hidden border-2 border-neon">
+            <!-- Replace with your actual profile image -->
+            <img src="/assets/FBAbout.jpg" alt="Sellami Mohamed" class="w-full h-full object-cover" />
+          </div>
+        </div>
+  
+        <div class="md:col-span-2">
+          <h3 class="text-3xl font-bold mb-4">SELLAMI MOHAMED</h3>
+          <p class="text-lg mb-6">
+            IT Management professional with experience in infrastructure systems, computer hardware repair, and graphic design. 
+            Passionate about technology and problem-solving with a strong foundation in accounting and database management.
+          </p>
+  
+          <div class="mb-6">
+            <h4 class="text-xl font-semibold mb-2 text-neon">Contact Information</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start">
+                <span class="mr-2">📍</span>
+                <span>Rue belle vue, Manzel Jamil, Bizerte (Tunisie) 7080</span>
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">📱</span>
+                <span>+216 22902730</span>
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">📧</span>
+                <span>sellami.0118.mohamed&#64;gmail.com</span>
+              </li>
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-neon">Skills Overview</h4>
+            <div class="space-y-6">
+              <div *ngFor="let skillGroup of skills">
+                <h5 class="text-lg font-medium mb-2">{{ skillGroup.category }}</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span *ngFor="let item of skillGroup.items" 
+                        class="px-3 py-1 bg-gray-800 rounded-full text-sm">
+                    {{ item }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  

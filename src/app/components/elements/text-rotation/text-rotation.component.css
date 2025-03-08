@@ -1,0 +1,19 @@
+
+
+  .text-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .animated-text {
+    font-weight: bold;
+    color: #e6ff00;
+    position: relative;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fade {
+    opacity: 0;
+    transform: translateY(10px);
+  }

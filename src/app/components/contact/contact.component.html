@@ -1,0 +1,114 @@
+
+
+<section class="min-h-screen bg-black text-white py-16 px-4 md:px-8">
+    <div class="container mx-auto max-w-5xl">
+      <div class="mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-2 text-neon">CONTACT</h2>
+        <div class="w-8 h-1 bg-neon"></div>
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+          <div class="md:flex justify-between items-center sm:flex-none">
+            <img class="h-80 w-auto max-md:mx-auto  rounded-md" src="/assets/Icons/Artboard 33.svg" alt="Contact">
+
+            <div class="social-icons  mx-4 sm:flex md:flex-col">
+
+            <a href="https://www.facebook.com/UNKNOWN.SELLAMI" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/unknown_sellami/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/unknownsellami/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            </div>
+
+            <p class="text-center">Or</p>
+           </div>
+        </div>
+  
+        
+        <!-- Contact Form -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+
+            <div class="flex-none md:flex gap-4 ">
+              <div class="">
+                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  formControlName="name" 
+                  class="w-full px-4 py-2 bg-[#282828]  rounded-md focus:outline-none focus:ring-2 focus:ring-neon focus:border-transparent"
+                  [ngClass]="{'border-red-500': submitted && contactForm.get('name')?.errors}"
+                >
+                <div *ngIf="submitted && contactForm.get('name')?.errors" class="text-red-500 text-xs mt-1">
+                  Name is required
+                </div>
+              </div>
+            
+              <div class="w-full">
+                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  formControlName="email" 
+                  class="w-full px-4 py-2 bg-[#282828] rounded-md focus:outline-none focus:ring-2 focus:ring-neon focus:border-transparent"
+                  [ngClass]="{'border-red-500': submitted && contactForm.get('email')?.errors}"
+                >
+                <div *ngIf="submitted && contactForm.get('email')?.errors" class="text-red-500 text-xs mt-1">
+                  Valid email is required
+                </div>
+              </div>
+            </div>
+        
+            <div>
+              <label for="message" class="block text-sm font-medium mb-1">Message</label>
+              <textarea 
+                id="message" 
+                formControlName="message" 
+                rows="5" 
+                class="w-full px-4 py-2 bg-[#282828] rounded-md focus:outline-none focus:ring-2 focus:ring-neon focus:border-transparent"
+                [ngClass]="{'border-red-500': submitted && contactForm.get('message')?.errors}"
+              ></textarea>
+              <div *ngIf="submitted && contactForm.get('message')?.errors" class="text-red-500 text-xs mt-1">
+                Message must be at least 10 characters
+              </div>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="px-6 py-3 bg-neon  text-black font-medium rounded-md hover:bg-opacity-80 transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="fixed bottom-4 right-4">
+     
+    <button routerLink="/" class=" bg-[#e6ff00] border-[2px] border-[#e6ff00] text-black px-4 py-2 rounded-full text-sm font-medium  hover:border-[2px]   hover:bg-black hover:text-[#e6ff00] transition-colors">
+      Take Me Home
+    </button>
+  </div>
+  <app-rising-stars></app-rising-stars>
+
+
+  <footer class="footer ">
+    <div class="footer-content">
+      <div class="copyright mx-4">
+        &copy; {{ currentYear }} UNKNOWN. All rights reserved.
+      </div>
+    
+      
+    </div>
+  </footer>

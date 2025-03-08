@@ -1,0 +1,37 @@
+.rising-stars-container {
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    bottom: -10px;
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }

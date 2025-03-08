@@ -1,0 +1,43 @@
+.text-neon {
+    color: #e6ff00; /* Adjust this color if needed */
+  }
+  
+  .bg-neon {
+    background-color: #e6ff00; /* Adjust this color if needed */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   
+}
+
+.social-icons a {
+    font-size: 40px;
+    color: #e6ff00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+
+.social-icons .fa-instagram:hover { color: #E4405F; }
+
+
+.footer {
+  background-color: black;
+  color: #e6ff00;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+
+.copyright {
+  font-size: 0.9rem;
+  
+}
+
